@@ -1,0 +1,93 @@
+<!-- Example Output
+What is the input string? Homer
+Homer has 5 characters.
+Constraints
+
+Challenges
+• If the user enters nothing, state that the user must enter
+something into the program.
+• Implement this program using a graphical userinterface
+and update the character counter every time a key is
+pressed. If your language doesn’t have a particularly
+friendly GUI library, try doing this exercise with HTML
+and JavaScript instead
+
+
+input 1=words or character;
+input 2=
+
+output1=length of characters; -->
+
+
+<!-- <html>
+    <input type="text" class="names">
+    <button>Submit</button>
+
+</html>
+<script>
+var body=document.querySelector('body');
+
+    // var button=document.querySelector('button');
+    body.addEventListener("keyup",(e)=>{
+        // console.log(e.type)
+var body=document.querySelector('body');
+    var names=document.querySelector('.names').value;
+    var a= ("The string has" + ' '+ names.length + ' '+'characters');
+    
+    body.append(a);
+   
+    
+    })
+    //     Create a program that prompts for a quote and an author.
+// Display the quotation and author as shown in the example
+// // output
+// input a= quotes
+// input b=author;
+
+</script> -->
+
+
+
+
+<html>
+<input type="text" class="quote" placeholder="quote">
+<input type="text" class="author" placeholder="author">
+<button type="submit">Submit</button>
+</html>
+<script>
+var quotesAndAuthors=[
+    {name:"segun",
+quotes:"Good"},
+{name:"john",
+quotes:"dfuifbbfuo"},
+]
+
+var button=document.querySelector('button');
+var body=document.querySelector('body');
+
+
+button.addEventListener('click',()=>{
+    var quotes=document.querySelector('.quote').value;
+var name=document.querySelector('.author').value;
+    quotesAndAuthors.push({name,quotes})
+    // console.log(quotesAndAuthors);
+    var myJSON = JSON.stringify(quotesAndAuthors);
+    console.log(myJSON);
+
+    localStorage.setItem(quotesAndAuthors, myJSON);
+    
+// body.innerHTML=myJSON;
+
+    
+})
+
+// console.log(quotesAndAuthors);
+
+// console.log(quotesAndAuthors.push({name,quotes}));
+// console.log(quotesAndAuthors);
+
+
+    
+</script>
+
+
